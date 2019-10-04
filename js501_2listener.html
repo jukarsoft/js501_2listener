@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div {
+			width: 100px;
+			height: 100px;
+			border: 2px solid blue;
+			display: inline-block;
+		}
+		.color {background-color: orange}
+	</style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			//activar listeners  Jquery
+			//$('div').on('click',saludar); //JQuery
+			//activar listeners  Js
+			var cajas=document.querySelectorAll('div');
+			for (o=0; o<cajas.length;o++){
+				cajas[o].addEventListener('click',saludar);
+			}
+		})
+
+		function saludar() {
+			debugger
+			this.classList.remove('color');
+			alert('click');
+			//se coge el value del combo y se crea una clase del mismo tipo 
+			//se coge el value del combo y se crea una clase del mismo tipo o
+			this.classList.add('color');
+			
+		}
+	</script>
+</head>
+<body>
+
+</body>
+	
+		
+		<div ></div>
+		<div></div>
+		<div></div>
+
+	
+</html>
